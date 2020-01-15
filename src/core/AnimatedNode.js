@@ -47,7 +47,7 @@ function runPropUpdates() {
     } else {
       const nodes = node.__getChildren();
       if (nodes) {
-        for (let i = 0, l = nodes.length; i < l; i++) {
+        for (let i = 0; i < nodes.length; i++) {
           findAndUpdateNodes(nodes[i]);
         }
       }
@@ -87,7 +87,7 @@ export default class AnimatedNode {
     const nodes = this.__inputNodes;
 
     if (nodes) {
-      for (let i = 0, l = nodes.length; i < l; i++) {
+      for (let i = 0; i < nodes.length; i++) {
         nodes[i].__addChild(this);
       }
     }
@@ -97,7 +97,7 @@ export default class AnimatedNode {
     const nodes = this.__inputNodes;
 
     if (nodes) {
-      for (let i = 0, l = nodes.length; i < l; i++) {
+      for (let i = 0; i < nodes.length; i++) {
         nodes[i].__removeChild(this);
       }
     }
